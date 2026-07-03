@@ -585,3 +585,213 @@ In this part, I learned:
 - How WHOIS supports the footprinting phase of ethical hacking.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Part 4 – DNS Footprinting
+
+## Objective
+
+I want to learn how to gather information about a target domain using DNS lookup tools. This is called DNS footprinting. It helps me identify IP addresses, mail servers, name servers and other DNS records that're useful when I am trying to learn more about a domain.
+
+---
+
+# What is DNS Footprinting?
+
+DNS Footprinting is the process of collecting information about a target domains DNS.
+
+I can find out things like:
+
+- IP Addresses
+
+- Name Servers
+
+- Mail Servers
+
+- Text Records
+
+- Canonical Names
+
+- Start of Authority
+
+---
+
+## 1. Perform a Basic DNS Lookup
+
+### Scenario
+
+I want to find the IP address of a target domain.
+
+### Command
+
+```bash
+
+nslookup example.com
+
+```
+
+### Description
+
+This command asks the DNS server for the IP address of the domain.
+
+### Screenshot
+
+![Alt text](screenshots/nslookup-example.png)
+
+---
+
+## 2. Query Name Server Records
+
+### Scenario
+
+I want to know which name servers are in charge of a domain.
+
+### Command
+
+```bash
+
+dig NS example.com
+
+```
+
+### Description
+
+This command shows me the Name Server records of the domain.
+
+### Screenshot
+
+![Alt text](screenshots/dig-ns.png)
+
+---
+
+## 3. Query Mail Server Records
+
+### Scenario
+
+I want to know which mail servers handle email for a domain.
+
+### Command
+
+```bash
+
+dig MX example.com
+
+```
+
+### Description
+
+This command shows me the Mail Exchange records.
+
+### Screenshot
+
+![Alt text](screenshots/dig-mx.png)
+
+---
+
+## 4. Query Text Records
+
+### Scenario
+
+I want to see the TXT records for a domain. These are used for things like verification and email security.
+
+### Command
+
+```bash
+
+dig TXT example.com
+
+```
+
+### Ddig MX example.comescription
+
+This command shows me the TXT records. These can include things like SPF, DKIM or domain verification entries.
+
+### Screenshot
+
+![Alt text](screenshots/dig-txt.png)
+
+---
+
+## 5. Query SOA Record
+
+### Scenario
+
+I want to know which DNS server is in charge and some administrative information.
+
+### Command
+
+```bash
+
+dig SOA example.com
+
+```
+
+### Description
+
+This command shows me the Start of Authority record for the domain.
+
+### Screenshot
+
+![Alt text](screenshots/dig-soa.png)
+
+---
+
+## 6. Perform DNS Footprinting, with dnsrecon
+
+### Scenario
+
+I want to collect lots of DNS record types at the time.
+
+### Command
+
+```bash
+
+dnsrecon -d example.com
+
+```
+
+### Description
+
+This command gives me lots of DNS information. This includes NS, MX, SOA and other DNS records.
+
+### Screenshot
+
+![Alt text](screenshots/dnsrecon.png)
+
+> **Note:** If `dnsrecon` is not installed I can install it using:
+
+```bash
+
+sudo apt install dnsrecon
+
+```
+
+---
+
+# Key Concepts Learned
+
+- DNS Footprinting
+
+- DNS Records
+
+- Name Servers
+
+- Mail Servers
+
+- TXT Records
+
+- SOA Records
+
+- DNS Enumeration
+
+---
+
+# Conclusion
+
+In this part, I learned:
+
+- How DNS supports the footprinting phase.
+- How to retrieve DNS records using `nslookup` and `dig`.
+- How to identify Name Servers and Mail Servers.
+- How to examine TXT and SOA records.
+- How to automate DNS footprinting using `dnsrecon`.
