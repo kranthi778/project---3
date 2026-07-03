@@ -1182,3 +1182,240 @@ In this part I learned:
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Part 7 – Metadata and Document Footprinting
+
+## Objective
+
+I want to learn how to find and look at metadata from documents that're available to the public during the footprinting phase. Metadata can tell me things about who wrote a document what software was used when it was made what operating system was used and other things that are helpful when I am trying to gather information.
+
+---
+
+# What is Metadata?
+
+Metadata is like a label on a file that says what is inside the file.
+
+Metadata is information stored inside a file that describes properties of the file.
+
+For example metadata can include things like the author of the document the software that was used to make it when it was created, when it was last changed what operating system was used and where a picture was taken.
+
+For instance metadata for a picture can have GPS coordinates and camera information.
+
+Security professionals look at metadata to gather information about a target without interacting with the target.
+
+---
+
+## 1. Download a Public PDF
+
+### Scenario
+
+I will download a PDF document that's available to the public so I can look at its metadata.
+
+### Command
+
+```bash
+
+wget https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+
+```
+
+### Description
+
+This command downloads a sample PDF document.
+
+The document is an example so I can practice looking at its metadata.
+
+### Screenshot
+
+![Alt text](screenshots/download-pdf.png)
+
+---
+
+## 2. View File Information
+
+### Scenario
+
+Before I look at the metadata I want to make sure I know what kind of file I have.
+
+### Command
+
+```bash
+
+file dummy.pdf
+
+```
+
+### Description
+
+This command tells me what kind of file I have and what format the document is in.
+
+### Screenshot
+
+![Alt text](screenshots/file-pdf.png)
+
+---
+
+## 3. Extract Metadata
+
+### Scenario
+
+Now I will extract the metadata from the PDF document.
+
+### Command
+
+```bash
+
+exiftool dummy.pdf
+
+```
+
+### Description
+
+This command shows me the metadata that is stored in the PDF document.
+
+It is like looking at a list of information about the document.
+
+### Screenshot
+
+![Alt text](screenshots/exiftool-pdf.png)
+
+> **Note:** If I do not have `exiftool` installed I can install it with this command:
+
+```bash
+
+sudo apt install libimage-exiftool-perl
+
+```
+
+---
+
+## 4. Save Metadata Report
+
+### Scenario
+
+I will save the metadata so I can look at it later.
+
+### Command
+
+```bash
+
+exiftool dummy.pdf > metadata-report.txt
+
+```
+
+### Description
+
+This command saves the metadata in a text file called `metadata-report.txt`.
+
+Now I can look at the metadata whenever I want.
+
+### Screenshot
+
+![Alt text](screenshots/save-metadata.png)
+
+---
+
+## 5. Review the Metadata Report
+
+### Scenario
+
+Now I will look at the metadata report I just saved.
+
+### Command
+
+```bash
+
+cat metadata-report.txt
+
+```
+
+### Description
+
+This command shows me the metadata report.
+
+I can see all the information that is stored in the document.
+
+### Screenshot
+
+![Alt text](screenshots/view-metadata-report.png)
+
+---
+
+# Information That Metadata May Reveal
+
+Metadata may have things like:
+
+- The author of the document
+
+- The creator of the document
+
+- The producer of the document
+
+- When the document was created
+
+- When the document was last changed
+
+- What version of PDF the document is
+
+- What software was used to make the document
+
+- What operating system was used to make the document
+
+---
+
+# Why Metadata Matters
+
+Looking at metadata helps security professionals:
+
+- Find out who made a document
+
+- Find out what software was used to make a document
+
+- Learn how an organization names its documents
+
+- Gather information about a target without interacting with the target
+
+---
+
+# Tools Used
+
+I used these tools:
+
+- wget
+
+- file
+
+- exiftool
+
+---
+
+# Key Concepts Learned
+
+I learned about:
+
+- Metadata
+
+- Document Footprinting
+
+- EXIF Data
+
+- PDF Metadata
+
+- Information Disclosure
+
+- OSINT
+
+---
+
+# Conclusion
+
+In this part, I learned:
+
+- What metadata is.
+- How metadata supports reconnaissance.
+- How to extract metadata using `exiftool`.
+- How to save metadata reports.
+- What information can be exposed through documents.
+
