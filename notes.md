@@ -120,7 +120,7 @@ This command asks the DNS server for information about the target domain. It sho
 
 ### Screenshot
 
-![ text](screenshots/dig-google.png)
+![Alt text](screenshots/dig-google.png)
 
 ---
 
@@ -227,7 +227,7 @@ I can use Google Dorking to find all sorts of documents that're available to the
 
 ### Screenshot
 
-![ text](screenshots/pdf-search.png)
+![Alt text](screenshots/pdf-search.png)
 
 ---
 
@@ -279,7 +279,7 @@ I can use Google Dorking to find all sorts of files that're available to the pub
 
 ### Screenshot
 
-![ text](screenshots/xls-search.png)
+![Alt text](screenshots/xls-search.png)
 
 ---
 
@@ -331,7 +331,7 @@ I can use Google Dorking to find pages with titles that are available to the pub
 
 ### Screenshot
 
-![ text](screenshots/intitle-search.png)
+![Alt text](screenshots/intitle-search.png)
 
 ---
 
@@ -388,5 +388,200 @@ I learned how to use Google Dorks to find available documents and login pages.
 I also learned how to search for directory listings and use search operators to gather information.
 
 Google Dorking is a tool for passive reconnaissance and can help me find information that is available, to the public.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Part 3 – WHOIS & Domain Information
+
+## Objective
+
+I want to learn how to find out information about a domain using the WHOIS protocol. The WHOIS protocol is one of the things I do when I am trying to figure out who owns a domain. I use it to find out who owns the domain when it was registered and what name servers it uses.
+
+---
+
+# What is WHOIS?
+
+The WHOIS protocol is a way to get information about a domain name. It can tell me things like:
+
+- The company that registered the domain
+
+- When the domain was registered
+
+- When the domain will expire
+
+- When the domain information was updated
+
+- What name servers the domain uses
+
+- The status of the domain
+
+- What country the person who registered the domain is from
+
+> **Note:** Some domains have registration so I may not be able to see who actually registered the domain.
+
+---
+
+## 1. Perform a WHOIS Lookup
+
+### Scenario
+
+I want to find out information about a domain.
+
+### Command
+
+```bash
+
+whois example.com
+
+```
+
+### Description
+
+This command shows me all the information about the domain.
+
+### Screenshot
+
+![Alt text](screenshots/whois-example.png)
+
+---
+
+## 2. Save WHOIS Output
+
+### Scenario
+
+I want to save the information about the domain so I can look at it later.
+
+### Command
+
+```bash
+
+whois example.com > whois-report.txt
+
+```
+
+### Description
+
+This command saves all the information about the domain to a file.
+
+### Screenshot
+
+![Alt text](screenshots/whois-save.png)
+
+---
+
+## 3. View the Saved Report
+
+### Scenario
+
+I want to look at the information about the domain that I saved.
+
+### Command
+
+```bash
+
+cat whois-report.txt
+
+```
+
+### Description
+
+This command shows me all the information about the domain that I saved.
+
+### Screenshot
+
+![Alt text](screenshots/whois-cat.png)
+
+---
+
+## 4. Perform WHOIS Lookup for Another Domain
+
+### Scenario
+
+I want to compare the information about two domains.
+
+### Command
+
+```bash
+
+whois openai.com
+
+```
+
+### Description
+
+This command shows me all the information about the other domain.
+
+### Screenshot
+
+![Alt text](screenshots/whois-openai.png)
+
+---
+
+# Information That Can Be Collected
+
+When I do a WHOIS lookup I can find out things like:
+
+- The name of the domain
+
+- The company that registered the domain
+
+- When the domain was registered
+
+- When the domain will expire
+
+- When the domain information was last updated
+
+- What name servers the domain uses
+
+- If the domain uses DNSSEC
+
+- The status of the domain
+
+---
+
+# Why WHOIS is Important
+
+The WHOIS protocol is important for security professionals because it helps us:
+
+- Figure out who owns a domain
+
+- Find out how old a domain is
+
+- Identify the company that registered the domain
+
+- Find out what name servers a domain uses
+
+- Gather information during a security assessment
+
+---
+
+# Key Concepts Learned
+
+- The WHOIS protocol
+
+- Registering a domain
+
+- The company that registers a domain
+
+- Name servers
+
+- The life cycle of a domain
+
+- Gathering information about a domain
+
+---
+
+
+# Conclusion
+
+In this part, I learned:
+
+- What WHOIS is.
+- How to perform a WHOIS lookup.
+- How to save WHOIS results.
+- How to analyze domain registration information.
+- How WHOIS supports the footprinting phase of ethical hacking.
 
 
