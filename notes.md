@@ -795,3 +795,186 @@ In this part, I learned:
 - How to identify Name Servers and Mail Servers.
 - How to examine TXT and SOA records.
 - How to automate DNS footprinting using `dnsrecon`.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+# Part 5 – Website Footprinting
+
+## Objective
+
+I want to learn how to gather information about a website that's available to the public using special tools. Website footprinting helps me find out what technologies a website uses, what kind of server it has and other details that are publicly available without trying to hack into the website.
+
+---
+
+# What is Website Footprinting?
+
+Website Footprinting is when I collect information about a website that's available to the public. This helps me understand what the website is made of and what technologies it uses.
+
+I can find out things like:
+
+- What kind of web server the website uses
+
+- What operating system the website is on sometimes
+
+- What kind of content management system the website uses
+
+- What programming language the website is written in
+
+- What security headers the website has
+
+- What technologies the website uses
+
+---
+
+## 1. Identify Website Technologies
+
+### Scenario
+
+I want to find out what technologies a website is using.
+
+### Command
+
+```bash
+
+whatweb https://example.com
+
+```
+
+### Description
+
+This command helps me detect what technologies the website is using, like the web server, content management system and other things that I can see.
+
+### Screenshot
+
+![Alt text](screenshots/whatweb-example.png)
+
+---
+
+## 2. Retrieve HTTP Headers
+
+### Scenario
+
+I want to look at the HTTP headers that the website sends back.
+
+### Command
+
+```bash
+
+curl -I https://example.com
+
+```
+
+### Description
+
+This command shows me only the HTTP headers that the website sends back without loading the webpage.
+
+### Screenshot
+
+![Alt text](screenshots/curl-header.png)
+
+---
+
+## 3. Download the Webpage Source
+
+### Scenario
+
+I want to get the HTML code of a webpage so I can look at it.
+
+### Command
+
+```bash
+
+curl https://example.com
+
+```
+
+### Description
+
+This command downloads the webpage. Shows me the HTML code.
+
+### Screenshot
+
+![Alt text](screenshots/curl-source.png)
+
+---
+
+## 4. View SSL/TLS Certificate Information
+
+### Scenario
+
+I want to look at the SSL/TLS certificate that the website uses.
+
+### Command
+
+```bash
+
+openssl s_client -connect example.com:443
+
+```
+
+### Description
+
+This command shows me the certificate details and how the website sets up a connection.
+
+### Screenshot
+
+![Alt text](screenshots/openssl-cert.png)
+
+> I need to press **Ctrl + C** after I see the certificate information.
+
+---
+
+## 5. View Website Security Headers
+
+### Scenario
+
+I want to check if the website has the security headers.
+
+### Command
+
+```bash
+
+curl -I https://example.com | grep -i security
+
+```
+
+### Description
+
+This command looks for security headers in the websites response.
+
+### Screenshot
+
+![Alt text](screenshots/security-headers.png)
+
+---
+
+## Key Concepts Learned
+
+- Website Footprinting
+
+- Technology Fingerprinting
+
+- HTTP Headers
+
+- HTML Source Analysis
+
+- SSL/TLS Certificates
+
+- Security Headers
+
+---
+
+# Conclusion
+
+In this part, I learned:
+
+- How to identify website technologies.
+- How to inspect HTTP response headers.
+- How to retrieve webpage source code.
+- How to inspect SSL/TLS certificates.
+- How website footprinting supports reconnaissance during ethical hacking.
