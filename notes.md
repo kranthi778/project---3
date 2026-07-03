@@ -155,5 +155,238 @@ In this part, I learned:
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Part 2 – Search Engine Footprinting (Google Dorking)
+
+## Objective
+
+I want to learn how to use search engines to find information about a company without going to their website.
+
+This is useful because it helps me find information that's available to the public without actually going to the companys systems.
+
+---
+
+# What is Google Dorking?
+
+Google Dorking is a way to use Googles search tools to find information that's not easy to find.
+
+Google Dorking is also called Google Hacking.
+
+People who are trying to help companies protect themselves from hackers use Google Dorks to find files and pages that should not be available to the public.
+
+> **Note:** I should only use Google Dorking on systems that I own or have permission to use.
+
+---
+
+## 1. Find Indexed Pages
+
+### Scenario
+
+I want to know how many pages of a website are indexed by Google.
+
+### Google Dork
+
+```text
+
+site:example.com
+
+```
+
+### Description
+
+This Google Dork shows me all the pages of a website that Google has indexed.
+
+Google Dorking is useful for this because it helps me see what information is available to the public.
+
+### Screenshot
+
+![Alt text](screenshots/site-example.png)
+
+---
+
+## 2. Search for PDF Documents
+
+### Scenario
+
+I want to find PDF documents that're available to the public on a website.
+
+### Google Dork
+
+```text
+
+site:mit.edu filetype:pdf
+
+```
+
+### Description
+
+This Google Dork helps me find PDF documents that are indexed by Google.
+
+I can use Google Dorking to find all sorts of documents that're available to the public.
+
+### Screenshot
+
+![ text](screenshots/pdf-search.png)
+
+---
+
+## 3. Search for Word Documents
+
+### Scenario
+
+I want to find Microsoft Word documents that're available to the public.
+
+### Google Dork
+
+```text
+
+site:example.com filetype:doc OR filetype:docx
+
+```
+
+### Description
+
+This Google Dork helps me find Microsoft Word documents that are indexed by Google.
+
+Google Dorking is a tool for finding documents that are available to the public.
+
+### Screenshot
+
+![Alt text](screenshots/doc-search.png)
+
+---
+
+## 4. Search for Excel Files
+
+### Scenario
+
+I want to find Excel spreadsheets that're available to the public.
+
+### Google Dork
+
+```text
+
+site:example.com filetype:xls OR filetype:xlsx
+
+```
+
+### Description
+
+This Google Dork helps me find Excel spreadsheets that are indexed by Google.
+
+I can use Google Dorking to find all sorts of files that're available to the public.
+
+### Screenshot
+
+![ text](screenshots/xls-search.png)
+
+---
+
+## 5. Search for Login Pages
+
+### Scenario
+
+I want to find login pages that're available to the public.
+
+### Google Dork
+
+```text
+
+site:example.com inurl:login
+
+```
+
+### Description
+
+This Google Dork helps me find URLs that have the word **login** in them.
+
+Google Dorking is useful for finding login pages that're available to the public.
+
+### Screenshot
+
+![Alt text](screenshots/login-search.png)
+
+---
+
+## 6. Search for Pages by
+
+### Scenario
+
+I want to find pages that have a title.
+
+### Google Dork
+
+```text
+
+site:example.com intitle:"index"
+
+```
+
+### Description
+
+This Google Dork helps me find pages that have the title I am looking for.
+
+I can use Google Dorking to find pages with titles that are available to the public.
+
+### Screenshot
+
+![ text](screenshots/intitle-search.png)
+
+---
+
+## 7. Search for Public Directories
+
+### Scenario
+
+I want to find directory listings that're available to the public.
+
+### Google Dork
+
+```text
+
+site:example.com intitle:"index of"
+
+```
+
+### Description
+
+This Google Dork helps me find directory listings that are indexed by Google.
+
+Google Dorking is useful for finding directory listings that're available to the public.
+
+### Screenshot
+
+![Alt text](screenshots/indexof-search.png)
+
+---
+
+## Key Concepts Learned
+
+- Google Dorking is a way to use Google to find information that's available to the public.
+
+- Search Operators are tools that help me find specific information.
+
+- Indexed Pages are pages that Google has indexed.
+
+- Public Documents are documents that are available to the public.
+
+- Login Page Discovery is the process of finding login pages that are available to the public.
+
+- Directory Listings are lists of files and directories that are available to the public.
+
+- Passive Information Gathering is the process of gathering information without directly interacting with a system.
+
+---
+
+# Conclusion 
+
+In this part I learned how Google indexes websites and how Google Dorking can help me find information that's available to the public.
+
+I learned how to use Google Dorks to find available documents and login pages.
+
+I also learned how to search for directory listings and use search operators to gather information.
+
+Google Dorking is a tool for passive reconnaissance and can help me find information that is available, to the public.
 
 
