@@ -978,3 +978,207 @@ In this part, I learned:
 - How to retrieve webpage source code.
 - How to inspect SSL/TLS certificates.
 - How website footprinting supports reconnaissance during ethical hacking.
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# Part 6 – Email & Social Media Footprinting
+
+## Objective
+
+Learn how to gather information about an organizations email addresses and social media presence using online search techniques.
+
+---
+
+# What is Email & Social Media Footprinting?
+
+Email and Social Media Footprinting is collecting information from email addresses, company websites and social media platforms that is available to anyone.
+
+Security professionals use this information to understand an organizations presence and find potential weak spots.
+
+Examples of information that can be collected include:
+
+* Public email addresses
+
+* Employee names
+
+* Company departments
+
+* Job roles
+
+* Social media profiles
+
+* Public contact information
+
+> **Note:** Only collect information that's available to anyone and only for organizations you are allowed to assess or for learning purposes.
+
+---
+
+## 1. Collect Public Email Addresses
+
+### Scenario
+
+Find email addresses associated with a domain that're available to anyone.
+
+### Command
+
+```bash
+
+theHarvester -d example.com -b hckertarget
+
+```
+
+### Description
+
+Searches Bing for email addresses related to the target domain that are publicly indexed.
+
+### Screenshot
+
+![Alt text](screenshots/theharvester-hckertarget.png)
+
+---
+
+## 2. Collect Email Addresses Using DuckDuckGo
+
+### Scenario
+
+Use a search engine to find publicly available email addresses.
+
+### Command
+
+```bash
+
+theHarvester -d example.com -b duckduckgo
+
+```
+
+### Description
+
+Searches DuckDuckGo for information associated with the target domain that's publicly available.
+
+### Screenshot
+
+![Alt text](screenshots/theharvester-duckduckgo.png)
+
+---
+
+## 3. Search LinkedIn for Public Employee Profiles
+
+### Scenario
+
+Find employee profiles for an organization that're visible to anyone.
+
+### Search Query
+
+```text
+
+site:linkedin.com "Example" employees
+
+```
+
+### Description
+
+Uses Google to find LinkedIn employee profiles that are publicly indexed.
+
+### Screenshot
+
+![Alt text](screenshots/linkedin-search.png)
+
+---
+
+## 4. Search GitHub for Public Organization Repositories
+
+### Scenario
+
+Find GitHub repositories belonging to an organization that're publicly available.
+
+### Search Query
+
+```text
+
+site:github.com example
+
+```
+
+### Description
+
+Searches Google for public GitHub repositories related to the organization.
+
+### Screenshot
+
+![Alt text](screenshots/github-search.png)
+
+---
+
+## 5. Search for Public Contact Pages
+
+### Scenario
+
+Find company contact information that's publicly available.
+
+### Search Query
+
+```text
+
+site:example.com contact
+
+```
+
+### Description
+
+Searches for contact pages that may contain email addresses, phone numbers and office locations.
+
+### Screenshot
+
+![Alt text](screenshots/contact-search.png)
+
+---
+
+# Tools Used
+
+* theHarvester
+
+* Google Search
+
+* LinkedIn
+
+* GitHub
+
+---
+
+# Key Concepts Learned
+
+* Email Footprinting
+
+* Social Media Footprinting
+
+* OSINT
+
+* Public Email Enumeration
+
+* Employee Profiling
+
+* Public Organization Information
+
+---
+
+#  conclusion
+
+In this part I learned:
+
+* How to identify available email addresses.
+
+* How search engines can help with investigations.
+
+* How to find visible employee profiles on LinkedIn.
+
+* How GitHub can provide information, about an organization.
+
+* How contact pages can help with gathering information.
+
+
+
